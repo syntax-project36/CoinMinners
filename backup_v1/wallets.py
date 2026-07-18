@@ -1,0 +1,23 @@
+WALLETS = {
+    "BTC": "bc1qu6gcggkrr7x37vajlxwqdf36t9w2xsfxw8qve0",
+
+    "USDT_BEP20": "0x9A15b9E605eB2acB9eA0fd125521C62e954c5840",
+
+    "USDT_ERC20": "0x9A15b9E605eB2acB9eA0fd125521C62e954c5840",
+
+    "USDT_TRC20": "TL5KDZYQrQvgoVDYzrXimzoAnD3NHTMM98",
+
+    "USDT_TON": "UQDmb0pcJ2ZL8Hr7kQshaI5lCYbaLi-WCtkg7L6aNt-Yw2lq",
+
+    "ETH": "0x9A15b9E605eB2acB9eA0fd125521C62e954c5840",
+
+    "BNB": "0x9A15b9E605eB2acB9eA0fd125521C62e954c5840",
+
+    "SOL": "52zXgSfYXLsMHjnT5KoAeoAzJEuWGTjb36cA1WxASDft",
+
+    "TRX": "TL5KDZYQrQvgoVDYzrXimzoAnD3NHTMM98",
+
+    "TON": "UQDmb0pcJ2ZL8Hr7kQshaI5lCYbaLi-WCtkg7L6aNt-Yw2lq",
+
+    "SUI": "0x7cd22c0d01b4ba2ff5bb6600ec611d61816d89c00ad9fe68032b6bd42acd6f0f"
+}
