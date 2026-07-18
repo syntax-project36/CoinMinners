@@ -1,0 +1,7 @@
+.env
+*.db
+*.zip
+__pycache__/
+*.pyc
+backup_v1/
+venv/
