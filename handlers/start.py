@@ -24,6 +24,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
     if is_new:
+        print(">>> NEW USER DETECTED <<<")
 
         username = f"@{user.username}" if user.username else "No username"
 
