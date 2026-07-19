@@ -12,6 +12,7 @@ from database import (
     admin_add_balance,
 )
 from miners import MINERS
+from announcements import announce
 
 
 async def purchases(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -189,6 +190,19 @@ Mining has started automatically.
 
 Happy mining!
 """
+    )
+
+    await announce(
+        context.bot,
+        f"""💎 <b>NEW MINER PURCHASED</b>
+
+⛏️ Miner:
+<b>{miner["name"]}</b>
+
+⚡ Status:
+Activated Successfully
+
+🎉 Another miner has joined the CoinMinners network and has started earning USDT."""
     )
 
     await update.message.reply_text("✅ Purchase approved.")
