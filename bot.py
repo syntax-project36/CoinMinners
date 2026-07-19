@@ -10,7 +10,7 @@ from config import BOT_TOKEN
 from database import create_tables
 from minerscheduler import run_mining
 
-from handlers.start import start
+from handlers.start import start, verify_channel
 from handlers.mining import button_handler
 from handlers.withdraw import withdraw
 from handlers.admin import (
@@ -36,6 +36,12 @@ def main():
 )
 
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(
+    CallbackQueryHandler(
+        verify_channel,
+        pattern="^verify_channel$"
+    )
+)
     app.add_handler(CommandHandler("approve", approve))
     app.add_handler(CommandHandler("purchases", purchases))
     app.add_handler(CommandHandler("withdrawals", withdrawals))
