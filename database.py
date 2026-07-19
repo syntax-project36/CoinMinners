@@ -71,14 +71,25 @@ def add_user(user_id, username, first_name, join_date):
     conn = connect()
     cursor = conn.cursor()
 
+    cursor.execute(
+        "SELECT 1 FROM users WHERE user_id = ?",
+        (user_id,)
+    )
+
+    if cursor.fetchone():
+        conn.close()
+        return False
+
     cursor.execute("""
-    INSERT OR IGNORE INTO users
+    INSERT INTO users
     (user_id, username, first_name, join_date)
     VALUES(?,?,?,?)
     """, (user_id, username, first_name, join_date))
 
     conn.commit()
     conn.close()
+
+    return True
 
 
 def add_purchase(
