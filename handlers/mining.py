@@ -318,7 +318,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
   
   📥 Wallet Address:
   
-  `{wallet}`
+   {wallet}
   
   📋 Tap and hold the wallet address above to copy it.
   
@@ -326,7 +326,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
   
   After payment, click the button below.
   """,
-              parse_mode="Markdown",
+              parse_mode=None,
               reply_markup=InlineKeyboardMarkup([
                   [InlineKeyboardButton("✅ I've Paid", callback_data="paid")]
               ])
