@@ -309,28 +309,22 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
           print(context.user_data)
           wallet = WALLETS.get(coin, "Wallet not available")
   
-          await query.message.reply_text(
-              f"""
-  💳 PAYMENT DETAILS
-  
-  🌐 Network:
-  {coin}
-  
-  📥 Wallet Address:
-  
-   {wallet}
-  
-  📋 Tap and hold the wallet address above to copy it.
-  
-  ⚠️ Send the exact amount to the wallet address above.
-  
-  After payment, click the button below.
-  """,
-              parse_mode=None,
-              reply_markup=InlineKeyboardMarkup([
-                  [InlineKeyboardButton("✅ I've Paid", callback_data="paid")]
-              ])
-          )
+        await query.message.reply_text(
+            "💳 PAYMENT DETAILS\n\n"
+            f"🌐 Network: {coin}\n\n"
+            f"📥 Wallet Address:\n{wallet}\n\n"
+            "📋 Tap and hold the wallet address above to copy it.\n\n"
+            "⚠️ Send the exact amount to the wallet address above.\n\n"
+            "After payment, click the button below.",
+            reply_markup=InlineKeyboardMarkup([
+                [
+                    InlineKeyboardButton(
+                        "✅ I've Paid",
+                        callback_data="paid"
+                    )
+                ]
+            ])
+        )
   
       elif query.data == "paid":
   
